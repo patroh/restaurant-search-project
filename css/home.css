@@ -1,0 +1,18 @@
+.centerSearchBar{
+    margin-top: 30%;
+}
+.searchIcon{
+    border-right: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.searchBar{
+    border-left: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.imageSlideShow{
+    height: 400px;
+    width: 100%;
+    overflow: fragments;
+}
