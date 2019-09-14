@@ -11,6 +11,8 @@ router.get("/search",function (req,res) {
     var term=req.query.query;
     var lat=req.query.lat;
     var lon=req.query.lon;
+    if(lat=="NA" || lon=="NA" )
+        res.send("LOCATION SERVICE NOT AVAILABLE ON DEVICE");
     var option={
       url:  SEARCH_URL+"term="+term+"&latitude="+lat+"&longitude="+lon+"&limit=50",
         headers:{
