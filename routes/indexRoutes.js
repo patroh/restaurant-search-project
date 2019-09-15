@@ -7,28 +7,28 @@ router.get("/",function (req,res) {
     res.render("home");
 });
 router.get("/search",function (req,res) {
-    console.log(req.ip);
     const SEARCH_URL="https://api.yelp.com/v3/businesses/search?";
     var term=req.query.query;
     var lat=req.query.lat;
     var lon=req.query.lon;
     if(lat=="NA" || lon=="NA" )
         res.send("LOCATION SERVICE NOT AVAILABLE ON DEVICE");
-    var option={
-      url:  SEARCH_URL+"term="+term+"&latitude="+lat+"&longitude="+lon+"&limit=50",
-        headers:{
-          "authorization":"bearer "+API_KEY
-        }
-    };
-    request(option,function (err,response,body) {
-       if(err){
-           console.log(err);
-       }
-       else {
-           //res.send(JSON.parse(body));
-           res.render("restaurents",{restaurents:JSON.parse(body).businesses});
-       }
-    });
+    else {
+        var option = {
+            url: SEARCH_URL + "term=" + term + "&latitude=" + lat + "&longitude=" + lon + "&limit=50",
+            headers: {
+                "authorization": "bearer " + API_KEY
+            }
+        };
+        request(option, function (err, response, body) {
+            if (err) {
+                console.log(err);
+            } else {
+                //res.send(JSON.parse(body));
+                res.render("restaurents", {restaurents: JSON.parse(body).businesses});
+            }
+        });
+    }
 });
 
 
