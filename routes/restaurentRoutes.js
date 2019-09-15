@@ -26,8 +26,8 @@ router.get("/view/:id",function (req,res) {
        else {
 
            var parsedBody=JSON.parse(body);
-            //console.log(JSON.parse(body));
-           if(parsedBody.hours) {
+            //console.log(JSON.parse(body.hours[0].open));
+           if(parsedBody.hours && parsedBody.hours[0] && parsedBody.hours[0].open) {
                res.render("view", {restro: parsedBody,restroReviews:reviews,restroTime: getRestroTime(parsedBody.hours[0].open)});
            }
            else{
@@ -68,6 +68,8 @@ function getRestroTime(time) {
         var newTime={"start":shh+":"+smm+" "+smeridian,"end":ehh+":"+emm+" "+emeridian};
         formattedTime.push(newTime);
     });
+    while (formattedTime.length!=7)
+        formattedTime.push({"start":"NA","end":"NA"});
     return formattedTime;
 }
 module.exports=router;

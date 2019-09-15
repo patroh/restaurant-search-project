@@ -7,6 +7,7 @@ router.get("/",function (req,res) {
     res.render("home");
 });
 router.get("/search",function (req,res) {
+    console.log(req.ip);
     const SEARCH_URL="https://api.yelp.com/v3/businesses/search?";
     var term=req.query.query;
     var lat=req.query.lat;
