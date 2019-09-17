@@ -12,9 +12,11 @@ router.post("/register",function (req,res) {
   User.register(({username:req.body.username}),req.body.password,function (err,user) {
      if(err){
         console.log(err);
-        return res.render("register");
+        req.flash("error",err.message);
+        return res.redirect("/register");
      }
      passport.authenticate("local")(req,res,function () {
+         req.flash("success","Welcome to our website "+req.body.username);
 res.redirect("/");
      });
 

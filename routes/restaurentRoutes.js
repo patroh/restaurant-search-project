@@ -12,6 +12,7 @@ router.get("/view/:id", function (req, res) {
             "authorization": "bearer " + API_KEY
         }
     };
+
     var reviews = "helo"; //stores reviews for the restaurant
     request({
         url: "https://api.yelp.com/v3/businesses/" + req.params.id + "/reviews",

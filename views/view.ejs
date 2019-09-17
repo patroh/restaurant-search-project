@@ -56,7 +56,9 @@
                 &nbsp;&nbsp;<%= restro.rating %>/5
                 &nbsp;&nbsp;
                 <i class="fas fa-thumbs-up" style="color: blue;"></i>&nbsp;&nbsp;
-                <%= restro.review_count %>
+                <%= restro.review_count %><br>
+                <a class="btn btn-danger text-white mt-2 mb-1" href="/wishlist/<%=restro.id%>">
+                    <i class="fas fa-heart mr-2"></i>Add to wishlist</a>
             </div>
         </div>
         <div class="col-lg-4 col-md-4 mt-4">

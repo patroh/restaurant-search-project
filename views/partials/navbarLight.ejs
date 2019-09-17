@@ -16,7 +16,7 @@
                     </li>
                 <% }else{ %>
                     <li class="nav-item active">
-                        <span class="nav-link" >Welcome <%= currentUser.username %></span>
+                        <a class="nav-link" href="/wishlist"><i class="fas fa-kiss-wink-heart"></i>&nbsp;&nbsp;Wishlist( <%= currentUser.username %> )</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/logout">Logout</a>
@@ -26,3 +26,4 @@
         </div>
     </div>
 </nav>
+<%include flashMessage%>
