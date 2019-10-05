@@ -6,9 +6,7 @@ var passport = require("passport");
 var promise = require("promise");
 var User = require("../models/userModel");
 var middleWares = require("../middlewares/index");
-
-const API_KEY = "fPqlQMDMDqFDnUHhNr1vq__LEXSHMUxCc3nYLULklv33jFfC6-1scdyMPlFwwNPLTCJIbV-RRzlqXwcV_-3AQ8l1e5RgVAEQnEJjS8oZzD0FzQIEC9AqXDrFb6R3XXYx";
-
+const API_KEY=""; // private stuff so removed :)
 router.get("/wishlist/:id", middleWares.isLoggedIn, function (req, res) {
     User.findById(req.user._id, function (err, foundUser) {
         if (err)
