@@ -2,8 +2,7 @@ var express = require("express");
 var router = express.Router();
 var request = require("request");
 
-const API_KEY = "fPqlQMDMDqFDnUHhNr1vq__LEXSHMUxCc3nYLULklv33jFfC6-1scdyMPlFwwNPLTCJIbV-RRzlqXwcV_-3AQ8l1e5RgVAEQnEJjS8oZzD0FzQIEC9AqXDrFb6R3XXYx";
-
+const API_KEY=""; // private stuff so removed :)
 router.get("/view/:id", function (req, res) {
     var searchURL = "https://api.yelp.com/v3/businesses/" + req.params.id;
     var option = {
