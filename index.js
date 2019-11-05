@@ -7,10 +7,8 @@ var LocalStrategy = require("passport-local");
 var mongoose = require("mongoose");
 var User = require("./models/userModel");
 
-var userName=""; // removed because private :)
-var password=""; //removed because private :)
 if(process.env.PORT)
-    mongoose.connect("mongodb+srv://"+userName+":"+password+"@yelpcamp-74fat.mongodb.net/test?retryWrites=true&w=majority");
+    mongoose.connect("mongodb+srv://patel969:rohan1999@yelpcamp-74fat.mongodb.net/test?retryWrites=true&w=majority");
 else
     mongoose.connect("mongodb://localhost/restro");
 
