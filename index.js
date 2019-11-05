@@ -8,7 +8,7 @@ var mongoose = require("mongoose");
 var User = require("./models/userModel");
 
 if(process.env.PORT)
-    mongoose.connect("mongodb+srv://patel969:rohan1999@yelpcamp-74fat.mongodb.net/test?retryWrites=true&w=majority");
+    mongoose.connect("//MY SERVER URL");
 else
     mongoose.connect("mongodb://localhost/restro");
 
