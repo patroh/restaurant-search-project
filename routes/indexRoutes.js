@@ -1,7 +1,7 @@
 var express=require("express");
 var router=express.Router();
 var request=require("request");
-const API_KEY="fPqlQMDMDqFDnUHhNr1vq__LEXSHMUxCc3nYLULklv33jFfC6-1scdyMPlFwwNPLTCJIbV-RRzlqXwcV_-3AQ8l1e5RgVAEQnEJjS8oZzD0FzQIEC9AqXDrFb6R3XXYx";
+const API_KEY="SECRET CALL ROHAN TO GET IT :)";
 
 router.get("/",function (req,res) {
     res.render("home");
